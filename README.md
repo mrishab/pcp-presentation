@@ -11,19 +11,19 @@ The presentation is built using **Reveal.js** and runs directly in the browser a
 ## Work Distribution
 
 - **Nicole Zino**: Reveal.js Setup / Framework, Conclusion  
-  [`index.html`](index.html), [`slides/conclusion.md`](slides/conclusion.md)
+-  [`public/index.html`](public/index.html), [`public/slides/conclusion.md`](public/slides/conclusion.md)
 
 - **Shahbaaz Gill**: Intro + Background  
-  [`slides/intro.md`](slides/intro.md)
+-  [`public/slides/intro.md`](public/slides/intro.md)
 
 - **Reet Singh**: PCP Explanation  
-  [`slides/pcp.md`](slides/pcp.md)
+-  [`public/slides/pcp.md`](public/slides/pcp.md)
 
 - **Rishab Manocha**: Undecidability Proof  
-  [`slides/proof.md`](slides/proof.md)
+-  [`public/slides/proof.md`](public/slides/proof.md)
 
 - **Tolu Adekore**: Example  
-  [`slides/example.md`](slides/example.md)
+-  [`public/slides/example.md`](public/slides/example.md)
 
 ---
 
@@ -41,24 +41,33 @@ The presentation is built using **Reveal.js** and runs directly in the browser a
 
 The project is organized as follows:
 
-- `index.html` – main presentation file  
-- `slides/` – slide content (one file per section)  
-- `dist/` – Reveal.js core files  
-- `plugin/` – Reveal.js plugins  
+- `public/index.html` – Vite entry page that loads the bundled `src/app.js` module and points Reveal to the markdown slides.  
+- `public/slides/` – slide content files consumed by the Markdown plugin (one section per file).  
+- `src/app.js` – entry script that imports Reveal.js, its CSS/theme, and the Markdown/highlight/notes plugins before calling `Reveal.initialize`.  
+- `node_modules/reveal.js/` – npm-provided runtime, themes, and plugin packages used by `src/app.js`.  
+- `dist/` – generated Vite build output (ignored in version control).
 
 ---
 
 ## Tools
 
-- HTML / CSS  
-- Reveal.js  
+- HTML / CSS
+- Reveal.js (via `node_modules/reveal.js`)
+- Node / npm
+- Vite (dev server + bundler)
 - GitHub (version control)
+
+## Environment Setup
+
+- Node 20.19.0 is pinned in `.nvmrc`; if you use direnv/autoenv the supplied `.envrc` will call `nvm use` when you `cd` into the repo.  
+- Run `nvm install` (only once per machine or when the version changes) before installing dependencies so you match the runtime expected by Reveal.js and Vite.
 
 ---
 
 ## Dependencies
 
-This project uses **Reveal.js** as the presentation framework.
+This project relies on **Reveal.js** from npm for the core runtime, themes, and Markdown/highlight/notes plugins. Vite is configured as a dev dependency to bundle `src/app.js` plus its CSS imports, emit `dist/` as the production bundle, and copy the `public/slides/` markdown files into the output.  
+Set the Node runtime with `nvm install`/`nvm use` before running `npm install` so the dependency tree is built against the pinned Node 20.19.0 runtime.
 
 Source: https://github.com/hakimel/reveal.js
 
@@ -66,31 +75,28 @@ Source: https://github.com/hakimel/reveal.js
 
 ## How to Run
 
-1. Clone the repository  
-2. Open `index.html` in a browser or via GitHub Pages  
-3. Use arrow keys to navigate slides  
+1. Clone the repository
+2. Run `nvm install` (this also automatically switches to Node 20.19.0 via `.nvmrc` and the provided `.envrc`) and then `npm install`
+3. Run `npm run dev` and open the address printed by Vite (typically `http://localhost:5173`) so the ES module entry at `public/index.html` can be loaded
+4. Navigate the slides with the arrow keys
+5. When you want to produce the distributable bundle, run `npm run build`; the generated files land in `dist/` and can be previewed with `npm run preview`
 
 ---
 
+
 ## Development Process
 
-During development, several issues were encountered and resolved:
-
-- Plugin loading errors due to incorrect file paths (404 errors)  
-- Markdown slides not rendering due to missing or misconfigured plugins  
-- Module-related issues when using `.mjs` files  
-- Resolved by switching to browser-compatible `.js` plugin files  
-- Tested presentation locally using a Python HTTP server  
-
-These steps ensured the final presentation runs correctly.
+- Adopted the npm `reveal.js` package and relocated the entry HTML + slides under `public/` so Vite can treat them as its root assets
+- Built `src/app.js` as the ES module entry point that imports Reveal.js, the theme CSS, and the Markdown/highlight/notes plugins before calling `Reveal.initialize`
+- Added `vite.config.js` to root production output in `dist/`, copy `public/slides/`, and allow the dev server to read `src/`
 
 ---
 
 ## Notes
 
-- Each team member edits only their assigned file in the `slides/` folder  
-- Do not modify `dist/` or `plugin/` folders  
-- All slides are loaded dynamically into `index.html`  
+- Each team member edits only their assigned file in `public/slides/`
+- `public/index.html` is the single entry page and `src/app.js` drives the Reveal setup; `dist/` is produced by Vite and should not be committed
+- All slides are still loaded dynamically via `data-markdown` so the Markdown plugin can hydrate them at runtime
 
 ---
 
