@@ -4,6 +4,7 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
   root: 'public',
+  base: './',
   publicDir: false,
   resolve: {
     alias: {
