@@ -1,10 +1,10 @@
-import 'reveal.js/dist/reset.css';
-import 'reveal.js/dist/reveal.css';
-import 'reveal.js/dist/theme/black.css';
-import Reveal from 'reveal.js/dist/reveal.esm.js';
-import RevealMarkdown from 'reveal.js/dist/plugin/markdown/markdown.mjs';
-import RevealHighlight from 'reveal.js/dist/plugin/highlight/highlight.mjs';
-import RevealNotes from 'reveal.js/dist/plugin/notes/notes.mjs';
+import 'reveal.js/reset.css';
+import 'reveal.js/reveal.css';
+import 'reveal.js/theme/black.css';
+import Reveal from 'reveal.js';
+import RevealMarkdown from 'reveal.js/plugin/markdown';
+import RevealHighlight from 'reveal.js/plugin/highlight';
+import RevealNotes from 'reveal.js/plugin/notes';
 
 Reveal.initialize({
   hash: true,

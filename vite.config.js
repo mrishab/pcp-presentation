@@ -1,9 +1,28 @@
+import { cpSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
   root: 'public',
-  publicDir: 'slides',
+  publicDir: false,
+  resolve: {
+    alias: {
+      '/src': resolve(__dirname, 'src'),
+    },
+  },
+  plugins: [
+    {
+      name: 'copy-public-subdirs',
+      closeBundle() {
+        const sourceDir = resolve(__dirname, 'public/slides');
+        const targetDir = resolve(__dirname, 'dist/slides');
+
+        if (existsSync(sourceDir)) {
+          cpSync(sourceDir, targetDir, { recursive: true });
+        }
+      },
+    },
+  ],
   build: {
     outDir: resolve(__dirname, 'dist'),
     emptyOutDir: true,
@@ -13,7 +32,7 @@ export default defineConfig({
   },
   server: {
     fs: {
-      allow: [resolve(__dirname, 'src')],
+      allow: [resolve(__dirname), resolve(__dirname, 'public'), resolve(__dirname, 'src')],
     },
   },
 });
