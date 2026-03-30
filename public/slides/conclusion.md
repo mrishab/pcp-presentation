@@ -1,18 +1,22 @@
-## Conclusion
-
-- [Main takeaway 1]
-- [Main takeaway 2]
-- [Main takeaway 3]
+# Conclusion
 
 ---
 
-## Key Insight
+## Takeaway
 
-- [Big idea]
-- [Why it matters]
+<div class="highlight-box">
+Not all problems have algorithmic solutions.
+</div>
+
+Understanding undecidability helps us recognize the boundaries of computation.
 
 ---
 
-## Final Thought
+# Questions?
 
-- [Closing statement]
+---
+
+## References
+
+- Sipser, M. *Introduction to the Theory of Computation*, Chapter 5.2
+- Post, E. "A variant of a recursively unsolvable problem" (1946)

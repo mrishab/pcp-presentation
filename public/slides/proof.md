@@ -578,7 +578,7 @@ Allows top to add the trailing &ast; to complete the match
 
 ---
 
-## Conclusion
+## Therefore
 
 <div class="theorem-box">
 <strong>Theorem 5.15:</strong> PCP is undecidable.
