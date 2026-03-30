@@ -12,9 +12,7 @@
 <strong>Theorem:</strong> PCP is undecidable.
 </div>
 
-<div class="fragment">
 There is no algorithm that can determine whether an arbitrary PCP instance has a match.
-</div>
 
 ---
 
@@ -73,10 +71,10 @@ D(&langle;M&rangle;):<br>
 
 What happens when we run D(&langle;D&rangle;)?
 
-- If D halts on &langle;D&rangle; &rarr; H accepts &rarr; D loops <!-- .element: class="fragment" -->
-- If D loops on &langle;D&rangle; &rarr; H rejects &rarr; D halts <!-- .element: class="fragment" -->
+- If D halts on &langle;D&rangle; &rarr; H accepts &rarr; D loops
+- If D loops on &langle;D&rangle; &rarr; H rejects &rarr; D halts
 
-**Contradiction!** <!-- .element: class="fragment highlight-red" -->
+**Contradiction!**
 
 ---
 
@@ -108,9 +106,9 @@ A<sub>TM</sub> is also undecidable (by similar argument)
 
 ## Why Does This Matter?
 
-- Fundamental limits of computation <!-- .element: class="fragment" -->
-- Cannot write a "universal debugger" <!-- .element: class="fragment" -->
-- Many practical problems reduce to the halting problem <!-- .element: class="fragment" -->
+- Fundamental limits of computation
+- Cannot write a "universal debugger"
+- Many practical problems reduce to the halting problem
 
 ---
 
@@ -120,9 +118,9 @@ A<sub>TM</sub> is also undecidable (by similar argument)
 
 To prove a new problem B is undecidable:
 
-1. Assume B is decidable <!-- .element: class="fragment" -->
-2. Show how to use B to decide A<sub>TM</sub> <!-- .element: class="fragment" -->
-3. Contradiction! <!-- .element: class="fragment" -->
+1. Assume B is decidable
+2. Show how to use B to decide A<sub>TM</sub>
+3. Contradiction!
 
 This is called a **reduction** from A<sub>TM</sub> to B
 
@@ -152,13 +150,9 @@ We will show:
   <span class="chain-node">PCP</span>
 </div>
 
-<div class="fragment">
 If PCP were decidable, then A<sub>TM</sub> would be decidable.
-</div>
 
-<div class="fragment highlight-red">
-Contradiction!
-</div>
+**Contradiction!**
 
 ---
 
@@ -166,9 +160,9 @@ Contradiction!
 
 ## Proof Overview
 
-1. Define MPCP (Modified PCP) <!-- .element: class="fragment" -->
-2. Reduce A<sub>TM</sub> to MPCP <!-- .element: class="fragment" -->
-3. Reduce MPCP to PCP <!-- .element: class="fragment" -->
+1. Define MPCP (Modified PCP)
+2. Reduce A<sub>TM</sub> to MPCP
+3. Reduce MPCP to PCP
 
 ---
 
@@ -197,7 +191,7 @@ The only difference: match **must** begin with [t<sub>1</sub>/b<sub>1</sub>]
 
 Forces the simulation to start correctly
 
-We control how the computation begins <!-- .element: class="fragment" -->
+We control how the computation begins
 
 ---
 
@@ -207,9 +201,9 @@ We control how the computation begins <!-- .element: class="fragment" -->
 
 Before constructing P&prime;:
 
-1. M never moves head left off the tape <!-- .element: class="fragment" -->
-2. If w = &epsilon;, use blank symbol ␣ instead <!-- .element: class="fragment" -->
-3. Match must start with first domino <!-- .element: class="fragment" -->
+1. M never moves head left off the tape
+2. If w = &epsilon;, use blank symbol ␣ instead
+3. Match must start with first domino
 
 ---
 
@@ -227,7 +221,7 @@ Given TM M = (Q, &Sigma;, &Gamma;, &delta;, q<sub>0</sub>, q<sub>accept</sub>, q
 
 Construct MPCP instance P&prime; such that:
 
-<div class="highlight-box fragment">
+<div class="highlight-box">
 P&prime; has a match &hArr; M accepts w
 </div>
 
@@ -239,7 +233,7 @@ P&prime; has a match &hArr; M accepts w
 
 A match in P&prime; encodes an **accepting computation history** of M on w
 
-Each domino simulates one step of M <!-- .element: class="fragment" -->
+Each domino simulates one step of M
 
 ---
 
@@ -253,9 +247,8 @@ A configuration represents the TM state at one moment:
 # q<sub>0</sub>w<sub>1</sub>w<sub>2</sub>&hellip;w<sub>n</sub> #
 </div>
 
-- # marks configuration boundaries <!-- .element: class="fragment" -->
-
-- State symbol appears left of the head position <!-- .element: class="fragment" -->
+- marks configuration boundaries
+- State symbol appears left of the head position
 
 ---
 
@@ -293,7 +286,7 @@ This **must** be the first domino in any match (MPCP requirement)
   </div>
 </div>
 
-Bottom is "ahead" &mdash; top must catch up by simulating M <!-- .element: class="fragment" -->
+Bottom is "ahead" &mdash; top must catch up by simulating M
 
 ---
 
@@ -400,9 +393,9 @@ For every a &isin; &Gamma;, add:
 
 Only the head position changes each step
 
-All other tape cells remain the same <!-- .element: class="fragment" -->
+All other tape cells remain the same
 
-These dominos copy unchanged symbols <!-- .element: class="fragment" -->
+These dominos copy unchanged symbols
 
 ---
 
@@ -433,10 +426,10 @@ These dominos copy unchanged symbols <!-- .element: class="fragment" -->
 
 ## Purpose
 
-- First domino: copies the separator # <!-- .element: class="fragment" -->
-- Second domino: adds blank ␣ for tape expansion <!-- .element: class="fragment" -->
+- First domino: copies the separator #
+- Second domino: adds blank ␣ for tape expansion
 
-(Simulates infinite blank tape to the right) <!-- .element: class="fragment" -->
+(Simulates infinite blank tape to the right)
 
 ---
 
@@ -471,9 +464,7 @@ For every a &isin; &Gamma;, add:
 
 After M accepts, the head "eats" adjacent symbols
 
-<div class="fragment">
 Allows top string to catch up with bottom string
-</div>
 
 ---
 
@@ -516,7 +507,7 @@ Allows top string to catch up with bottom string
 
 This domino lets the top finally equal the bottom
 
-<div class="highlight-box fragment">
+<div class="highlight-box">
 Match complete &hArr; M accepted w
 </div>
 
@@ -633,7 +624,7 @@ Then P = :
 
 **Only** this domino has &ast; at the start of **both** top and bottom
 
-Any match **must** begin here! <!-- .element: class="fragment" -->
+Any match **must** begin here!
 
 ---
 
@@ -654,9 +645,9 @@ Allows top to add the trailing &ast; to complete the match
 
 ## Correctness
 
-- Original symbols appear at even positions <!-- .element: class="fragment" -->
-- &ast; symbols interleave but don't affect matching <!-- .element: class="fragment" -->
-- First domino is forced &rarr; MPCP constraint satisfied <!-- .element: class="fragment" -->
+- Original symbols appear at even positions
+- &ast; symbols interleave but don't affect matching
+- First domino is forced &rarr; MPCP constraint satisfied
 
 ---
 
@@ -684,11 +675,11 @@ Allows top to add the trailing &ast; to complete the match
 
 ## The Logic
 
-1. A<sub>TM</sub> is undecidable (proven earlier) <!-- .element: class="fragment" -->
-2. If MPCP were decidable &rarr; A<sub>TM</sub> decidable <!-- .element: class="fragment" -->
-3. Therefore MPCP is undecidable <!-- .element: class="fragment" -->
-4. If PCP were decidable &rarr; MPCP decidable <!-- .element: class="fragment" -->
-5. Therefore PCP is undecidable <!-- .element: class="fragment highlight-red" -->
+1. A<sub>TM</sub> is undecidable (proven earlier)
+2. If MPCP were decidable &rarr; A<sub>TM</sub> decidable
+3. Therefore MPCP is undecidable
+4. If PCP were decidable &rarr; MPCP decidable
+5. Therefore PCP is undecidable
 
 ---
 
