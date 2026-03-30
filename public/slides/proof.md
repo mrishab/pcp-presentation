@@ -1,6 +1,10 @@
+<div class="slide-author" data-name="Rishab Manocha"></div>
+
 # Proving PCP is Undecidable
 
 ---
+
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## Theorem 5.15
 
@@ -14,6 +18,7 @@ There is no algorithm that can determine whether an arbitrary PCP instance has a
 
 ---
 
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## The Halting Problem
 
@@ -23,18 +28,22 @@ There is no algorithm that can determine whether an arbitrary PCP instance has a
 
 ---
 
+<div class="slide-author" data-name="Rishab Manocha"></div>
+
 ## Halting Problem is Undecidable
 
 **Theorem:** There is no algorithm that can decide whether an arbitrary Turing Machine halts on a given input.
 
 ---
 
+<div class="slide-author" data-name="Rishab Manocha"></div>
+
 ## Proof by Contradiction
 
 Assume a decider H exists:
 
 <div class="math-block">
-H(&langle;M, w&rangle;) = 
+H(&langle;M, w&rangle;) =
 <span class="cases">
   accept &nbsp; if M halts on w<br>
   reject &nbsp; if M loops on w
@@ -42,6 +51,8 @@ H(&langle;M, w&rangle;) =
 </div>
 
 ---
+
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## Constructing the Contradiction
 
@@ -56,6 +67,8 @@ D(&langle;M&rangle;):<br>
 
 ---
 
+<div class="slide-author" data-name="Rishab Manocha"></div>
+
 ## The Paradox
 
 What happens when we run D(&langle;D&rangle;)?
@@ -67,6 +80,8 @@ What happens when we run D(&langle;D&rangle;)?
 
 ---
 
+<div class="slide-author" data-name="Rishab Manocha"></div>
+
 ## Therefore...
 
 The Halting Problem is **undecidable**
@@ -74,6 +89,8 @@ The Halting Problem is **undecidable**
 No algorithm can solve it for all inputs
 
 ---
+
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## A<sub>TM</sub> is Undecidable
 
@@ -87,6 +104,8 @@ A<sub>TM</sub> is also undecidable (by similar argument)
 
 ---
 
+<div class="slide-author" data-name="Rishab Manocha"></div>
+
 ## Why Does This Matter?
 
 - Fundamental limits of computation <!-- .element: class="fragment" -->
@@ -94,6 +113,8 @@ A<sub>TM</sub> is also undecidable (by similar argument)
 - Many practical problems reduce to the halting problem <!-- .element: class="fragment" -->
 
 ---
+
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## Reductions
 
@@ -107,6 +128,8 @@ This is called a **reduction** from A<sub>TM</sub> to B
 
 ---
 
+<div class="slide-author" data-name="Rishab Manocha"></div>
+
 ## Our Goal
 
 Prove the **Post Correspondence Problem (PCP)** is undecidable
@@ -114,6 +137,8 @@ Prove the **Post Correspondence Problem (PCP)** is undecidable
 by reducing A<sub>TM</sub> to PCP
 
 ---
+
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## Proof Strategy
 
@@ -137,6 +162,8 @@ Contradiction!
 
 ---
 
+<div class="slide-author" data-name="Rishab Manocha"></div>
+
 ## Proof Overview
 
 1. Define MPCP (Modified PCP) <!-- .element: class="fragment" -->
@@ -145,9 +172,13 @@ Contradiction!
 
 ---
 
+<div class="slide-author" data-name="Rishab Manocha"></div>
+
 # Step 1: Modified PCP (MPCP)
 
 ---
+
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## MPCP Definition
 
@@ -160,6 +191,8 @@ The only difference: match **must** begin with [t<sub>1</sub>/b<sub>1</sub>]
 
 ---
 
+<div class="slide-author" data-name="Rishab Manocha"></div>
+
 ## Why MPCP?
 
 Forces the simulation to start correctly
@@ -167,6 +200,8 @@ Forces the simulation to start correctly
 We control how the computation begins <!-- .element: class="fragment" -->
 
 ---
+
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## Technical Assumptions
 
@@ -178,9 +213,13 @@ Before constructing P&prime;:
 
 ---
 
+<div class="slide-author" data-name="Rishab Manocha"></div>
+
 # Step 2: A<sub>TM</sub> &le;<sub>m</sub> MPCP
 
 ---
+
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## The Construction
 
@@ -194,6 +233,8 @@ P&prime; has a match &hArr; M accepts w
 
 ---
 
+<div class="slide-author" data-name="Rishab Manocha"></div>
+
 ## Key Idea
 
 A match in P&prime; encodes an **accepting computation history** of M on w
@@ -201,6 +242,8 @@ A match in P&prime; encodes an **accepting computation history** of M on w
 Each domino simulates one step of M <!-- .element: class="fragment" -->
 
 ---
+
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## Configurations
 
@@ -211,13 +254,18 @@ A configuration represents the TM state at one moment:
 </div>
 
 - # marks configuration boundaries <!-- .element: class="fragment" -->
+
 - State symbol appears left of the head position <!-- .element: class="fragment" -->
 
 ---
 
+<div class="slide-author" data-name="Rishab Manocha"></div>
+
 # Part 1: Initial Domino
 
 ---
+
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## First Domino
 
@@ -229,6 +277,8 @@ A configuration represents the TM state at one moment:
 This **must** be the first domino in any match (MPCP requirement)
 
 ---
+
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## What This Achieves
 
@@ -247,9 +297,13 @@ Bottom is "ahead" &mdash; top must catch up by simulating M <!-- .element: class
 
 ---
 
+<div class="slide-author" data-name="Rishab Manocha"></div>
+
 # Part 2: Right Moves
 
 ---
+
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## Right Move Dominos
 
@@ -263,6 +317,8 @@ If &delta;(q, a) = (r, b, R), add:
 </div>
 
 ---
+
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## Intuition: Right Move
 
@@ -280,9 +336,13 @@ Head moves right, state changes q &rarr; r, cell changes a &rarr; b
 
 ---
 
+<div class="slide-author" data-name="Rishab Manocha"></div>
+
 # Part 3: Left Moves
 
 ---
+
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## Left Move Dominos
 
@@ -296,6 +356,8 @@ If &delta;(q, a) = (r, b, L), add:
 </div>
 
 ---
+
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## Intuition: Left Move
 
@@ -313,9 +375,13 @@ Need c (left symbol) for context &mdash; head moves left
 
 ---
 
+<div class="slide-author" data-name="Rishab Manocha"></div>
+
 # Part 4: Copy Symbols
 
 ---
+
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## Copy Dominos
 
@@ -328,6 +394,8 @@ For every a &isin; &Gamma;, add:
 
 ---
 
+<div class="slide-author" data-name="Rishab Manocha"></div>
+
 ## Why Copy?
 
 Only the head position changes each step
@@ -338,9 +406,13 @@ These dominos copy unchanged symbols <!-- .element: class="fragment" -->
 
 ---
 
+<div class="slide-author" data-name="Rishab Manocha"></div>
+
 # Part 5: Configuration Separators
 
 ---
+
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## Separator Dominos
 
@@ -357,6 +429,8 @@ These dominos copy unchanged symbols <!-- .element: class="fragment" -->
 
 ---
 
+<div class="slide-author" data-name="Rishab Manocha"></div>
+
 ## Purpose
 
 - First domino: copies the separator # <!-- .element: class="fragment" -->
@@ -366,9 +440,13 @@ These dominos copy unchanged symbols <!-- .element: class="fragment" -->
 
 ---
 
+<div class="slide-author" data-name="Rishab Manocha"></div>
+
 # Part 6: Accepting State
 
 ---
+
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## Cleanup Dominos
 
@@ -387,6 +465,8 @@ For every a &isin; &Gamma;, add:
 
 ---
 
+<div class="slide-author" data-name="Rishab Manocha"></div>
+
 ## What This Does
 
 After M accepts, the head "eats" adjacent symbols
@@ -396,6 +476,8 @@ Allows top string to catch up with bottom string
 </div>
 
 ---
+
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## Visualization
 
@@ -411,9 +493,13 @@ Allows top string to catch up with bottom string
 
 ---
 
+<div class="slide-author" data-name="Rishab Manocha"></div>
+
 # Part 7: Final Domino
 
 ---
+
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## Completing the Match
 
@@ -423,6 +509,8 @@ Allows top string to catch up with bottom string
 </div>
 
 ---
+
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## Result
 
@@ -434,9 +522,13 @@ Match complete &hArr; M accepted w
 
 ---
 
+<div class="slide-author" data-name="Rishab Manocha"></div>
+
 # Step 3: MPCP &le;<sub>m</sub> PCP
 
 ---
+
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## The Problem
 
@@ -446,11 +538,15 @@ PCP: match can start with **any** domino
 
 ---
 
+<div class="slide-author" data-name="Rishab Manocha"></div>
+
 ## Solution: Force the Start
 
 Modify dominos so only the first one **can** start a match
 
 ---
+
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## The &ast; Transformation
 
@@ -473,6 +569,8 @@ For any string u = u<sub>1</sub>u<sub>2</sub>&hellip;u<sub>n</sub>, define:
 
 ---
 
+<div class="slide-author" data-name="Rishab Manocha"></div>
+
 ## Example
 
 Let u = abc
@@ -485,6 +583,8 @@ Let u = abc
 
 ---
 
+<div class="slide-author" data-name="Rishab Manocha"></div>
+
 ## Converting P&prime; to P
 
 If P&prime; = { [t<sub>1</sub>/b<sub>1</sub>], [t<sub>2</sub>/b<sub>2</sub>], &hellip;, [t<sub>k</sub>/b<sub>k</sub>] }
@@ -492,6 +592,8 @@ If P&prime; = { [t<sub>1</sub>/b<sub>1</sub>], [t<sub>2</sub>/b<sub>2</sub>], &h
 Then P = :
 
 ---
+
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## New Domino Set
 
@@ -520,6 +622,8 @@ Then P = :
 
 ---
 
+<div class="slide-author" data-name="Rishab Manocha"></div>
+
 ## Why This Works
 
 <div class="domino-box highlight">
@@ -533,6 +637,8 @@ Any match **must** begin here! <!-- .element: class="fragment" -->
 
 ---
 
+<div class="slide-author" data-name="Rishab Manocha"></div>
+
 ## The Final Domino
 
 <div class="domino-box">
@@ -544,6 +650,8 @@ Allows top to add the trailing &ast; to complete the match
 
 ---
 
+<div class="slide-author" data-name="Rishab Manocha"></div>
+
 ## Correctness
 
 - Original symbols appear at even positions <!-- .element: class="fragment" -->
@@ -552,9 +660,13 @@ Allows top to add the trailing &ast; to complete the match
 
 ---
 
+<div class="slide-author" data-name="Rishab Manocha"></div>
+
 # Putting It All Together
 
 ---
+
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## The Reduction Chain
 
@@ -568,6 +680,8 @@ Allows top to add the trailing &ast; to complete the match
 
 ---
 
+<div class="slide-author" data-name="Rishab Manocha"></div>
+
 ## The Logic
 
 1. A<sub>TM</sub> is undecidable (proven earlier) <!-- .element: class="fragment" -->
@@ -577,6 +691,8 @@ Allows top to add the trailing &ast; to complete the match
 5. Therefore PCP is undecidable <!-- .element: class="fragment highlight-red" -->
 
 ---
+
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## Therefore
 

@@ -9,4 +9,17 @@ import RevealNotes from 'reveal.js/plugin/notes';
 Reveal.initialize({
   hash: true,
   plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+}).then(() => {
+  const authorFooter = document.getElementById('author-footer');
+
+  function updateAuthor() {
+    const currentSlide = Reveal.getCurrentSlide();
+    if (!currentSlide) return;
+
+    const authorEl = currentSlide.querySelector('.slide-author');
+    authorFooter.textContent = authorEl?.dataset.name || '';
+  }
+
+  Reveal.on('slidechanged', updateAuthor);
+  updateAuthor();
 });
