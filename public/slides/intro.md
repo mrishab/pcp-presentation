@@ -22,5 +22,5 @@
 
 A problem is **decidable** if there exists an algorithm (Turing Machine) that:
 
-- Always halts <!-- .element: class="fragment" -->
-- Correctly outputs YES or NO for every input <!-- .element: class="fragment" -->
+- Always halts
+- Correctly outputs YES or NO for every input
