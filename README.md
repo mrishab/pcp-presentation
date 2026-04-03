@@ -84,3 +84,19 @@ GitHub Pages is deployed by `.github/workflows/deploy.yml`.
 
 - <https://revealjs.com/installation/>
 - <https://github.com/hakimel/reveal.js>
+
+## Individual Contributions (Detailed)
+
+### Shahbaaz Gill – Intro + Background
+
+**Responsibilities:**
+- Introduced the concept of undecidability
+- Provided intuitive explanation of the domino-style (PCP) problem
+- Explained why the topic matters in computer science
+- Created supporting documentation and presentation notes
+
+**Files contributed:**
+- public/slides/intro.md
+- presentation/intro.md
+- presentation/slide_content.md
+- logs/shahbaaz_log.md
