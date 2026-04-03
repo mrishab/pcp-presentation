@@ -1,0 +1,8 @@
+Possible visual for slide:
+A simple domino-style example showing strings on the top and bottom.
+
+Example:
+Tile 1: top = a, bottom = ab
+Tile 2: top = ba, bottom = a
+
+Goal: arrange tiles so the full top string equals the full bottom string.
