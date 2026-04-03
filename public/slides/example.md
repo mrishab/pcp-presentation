@@ -1,14 +1,14 @@
 <div class="slide-author" data-name="Tolu Adekore"></div>
 
-# PCP: A Worked Example
+# Let's Try a PCP Example
 
 ---
 
 <div class="slide-author" data-name="Tolu Adekore"></div>
 
-## Our Domino Collection
+## Here's our domino set
 
-We have 3 dominoes:
+Three dominoes, all over the alphabet {a}:
 
 <div class="domino-row">
   <div class="domino-box large">
@@ -25,27 +25,27 @@ We have 3 dominoes:
   </div>
 </div>
 
-**Goal:** Find a sequence of indices so the top and bottom strings match.
+We need to pick a sequence of these (repeats allowed) so the tops and bottoms line up.
 
 ---
 
 <div class="slide-author" data-name="Tolu Adekore"></div>
 
-## What Are We Looking For?
+## So what are we actually trying to do?
 
-We want to pick a sequence like [1, 2, 3, 1, ...] such that:
+Pick indices like [1, 2, 1, 3, ...] so that when you stack and concatenate:
 
 <div class="highlight-box">
-  Concatenated top = Concatenated bottom
+  top string = bottom string
 </div>
 
-Let's work through it step by step.
+Let's just try it and see what happens.
 
 ---
 
 <div class="slide-author" data-name="Tolu Adekore"></div>
 
-## Step 1: Start with Domino 1
+## Start with domino 1
 
 <div class="domino-row">
   <div class="domino-box large">
@@ -56,22 +56,22 @@ Let's work through it step by step.
 
 <div class="match-visual">
   <div class="match-row">
-    <span class="match-label">Top so far:</span>
+    <span class="match-label">Top:</span>
     <span class="match-content">a</span>
   </div>
   <div class="match-row">
-    <span class="match-label">Bottom so far:</span>
+    <span class="match-label">Bottom:</span>
     <span class="match-content">aaa</span>
   </div>
 </div>
 
-Bottom is ahead by 2 — we need to grow the top.
+Bottom is already 2 characters ahead — we need to catch up somehow.
 
 ---
 
 <div class="slide-author" data-name="Tolu Adekore"></div>
 
-## Step 2: Add Domino 2
+## Add domino 2
 
 <div class="domino-row">
   <div class="domino-box large">
@@ -82,43 +82,43 @@ Bottom is ahead by 2 — we need to grow the top.
 
 <div class="match-visual">
   <div class="match-row">
-    <span class="match-label">Top so far:</span>
+    <span class="match-label">Top:</span>
     <span class="match-content">a + aa = <strong>aaa</strong></span>
   </div>
   <div class="match-row">
-    <span class="match-label">Bottom so far:</span>
+    <span class="match-label">Bottom:</span>
     <span class="match-content">aaa + a = <strong>aaaa</strong></span>
   </div>
 </div>
 
-Top grew faster — but bottom is still ahead by 1.
+Top gained more than bottom this time — still 1 behind though.
 
 ---
 
 <div class="slide-author" data-name="Tolu Adekore"></div>
 
-## Step 3: Add Domino 2 Again
+## Add domino 2 again
 
 <div class="match-visual">
   <div class="match-row">
-    <span class="match-label">Top so far:</span>
+    <span class="match-label">Top:</span>
     <span class="match-content">aaa + aa = <strong>aaaaa</strong></span>
   </div>
   <div class="match-row">
-    <span class="match-label">Bottom so far:</span>
+    <span class="match-label">Bottom:</span>
     <span class="match-content">aaaa + a = <strong>aaaaa</strong></span>
   </div>
 </div>
 
 <div class="highlight-box">
-  ✅ Match found! Sequence: [1, 2, 2] &rarr; both = <strong>aaaaa</strong>
+  ✅ Got it! Sequence [1, 2, 2] gives us <strong>aaaaa</strong> on both sides
 </div>
 
 ---
 
 <div class="slide-author" data-name="Tolu Adekore"></div>
 
-## Verifying the Match
+## Full picture of that match
 
 <div class="domino-row">
   <div class="domino-box large">
@@ -146,13 +146,13 @@ Top grew faster — but bottom is still ahead by 1.
   </div>
 </div>
 
-Both sides produce the same 5-character string. &checkmark;
+Both reach the same string, just by different routes. That's the whole game.
 
 ---
 
 <div class="slide-author" data-name="Tolu Adekore"></div>
 
-## Another Valid Match: Sequence [1, 3]
+## What if we tried [1, 3] instead?
 
 <div class="domino-row">
   <div class="domino-box large">
@@ -177,16 +177,14 @@ Both sides produce the same 5-character string. &checkmark;
 </div>
 
 <div class="highlight-box">
-  ❌ Not equal &mdash; off by one!
+  ❌ Off by one — not every sequence works, even on a solvable instance
 </div>
-
-Multiple sequences exist; not all of them work.
 
 ---
 
 <div class="slide-author" data-name="Tolu Adekore"></div>
 
-## Now: A PCP Instance With No Solution
+## Now let's look at one with NO solution
 
 <div class="domino-row">
   <div class="domino-box large">
@@ -203,43 +201,42 @@ Multiple sequences exist; not all of them work.
   </div>
 </div>
 
-No sequence produces a match for this collection. The answer is **NO**.
+No matter what sequence you try, top and bottom never match. The answer here is just **NO**.
 
 ---
 
 <div class="slide-author" data-name="Tolu Adekore"></div>
 
-## Why Can't We Just Check All Sequences?
+## So why can't we just... brute force it?
 
-- There are **infinitely many** possible sequences to try
-- If no match exists, we'd search forever and never know
-- We can't distinguish "no match" from "haven't found it yet"
+- There are infinitely many sequences to check
+- If a match exists, great — you'll eventually find it
+- But if there's no match? You search forever and never know when to stop
 
 <div class="highlight-box">
-  This is exactly why PCP is undecidable.
+  You can't tell "no match exists" apart from "haven't found it yet" — that's the problem.
 </div>
 
 ---
 
 <div class="slide-author" data-name="Tolu Adekore"></div>
 
-## Key Observations
+## A few things to take away from this
 
-- A match may require trying **many** combinations before finding one
-- Some instances have **multiple** valid matches, some have **none**
-- There is **no shortcut** — no pattern to predict which sequences work
-- The unpredictability here mirrors the unpredictability of Turing Machine execution
+- Some PCP instances are solvable, some aren't — and they can look identical upfront
+- Even solvable ones might need you to try many sequences before hitting the right one
+- There's no clever shortcut — no pattern that tells you which sequences will work
 
 ---
 
 <div class="slide-author" data-name="Tolu Adekore"></div>
 
-## Connecting Back to the Proof
+## Tying it back to the proof
 
 <div class="definition-box">
-  When A<sub>TM</sub> is reduced to PCP, domino sequences encode
-  Turing Machine computation histories. A match exists
-  <strong>if and only if</strong> the machine accepts.
+  In the reduction from A<sub>TM</sub>, domino sequences encode
+  computation steps of a Turing Machine. A match exists
+  <strong>if and only if</strong> that machine accepts its input.
 </div>
 
-The simple string-matching we just did encodes something as powerful as arbitrary computation.
+What looked like a simple string puzzle is secretly running arbitrary computation.
