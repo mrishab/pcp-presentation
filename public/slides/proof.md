@@ -472,15 +472,19 @@ Allows top string to catch up with bottom string
 
 ## Visualization
 
-<div class="cleanup-visual">
-  <div>&hellip; a b q<sub>accept</sub> c d &hellip;</div>
+<div class="cleanup-visual small">
+  <div>a b q<sub>acc</sub> c d</div>
   <div class="arrow">&darr;</div>
-  <div>&hellip; a q<sub>accept</sub> d &hellip;</div>
+  <div>a b q<sub>acc</sub> d</div>
   <div class="arrow">&darr;</div>
-  <div>&hellip; q<sub>accept</sub> d &hellip;</div>
+  <div>a q<sub>acc</sub> d</div>
   <div class="arrow">&darr;</div>
-  <div>&hellip; q<sub>accept</sub> &hellip;</div>
+  <div>q<sub>acc</sub> d</div>
+  <div class="arrow">&darr;</div>
+  <div>q<sub>acc</sub></div>
 </div>
+
+<p class="small-note">Each step: q<sub>accept</sub> "eats" one adjacent symbol</p>
 
 ---
 
@@ -510,6 +514,48 @@ This domino lets the top finally equal the bottom
 <div class="highlight-box">
 Match complete &hArr; M accepted w
 </div>
+
+---
+
+<div class="slide-author" data-name="Rishab Manocha"></div>
+
+## Why Not Use P&prime; Directly as PCP?
+
+<div class="warning-box">
+If we view P&prime; as a PCP instance (not MPCP), it <strong>always</strong> has a trivial match &mdash; regardless of whether M accepts w!
+</div>
+
+---
+
+<div class="slide-author" data-name="Rishab Manocha"></div>
+
+## The Trivial Match
+
+Can you find it? (Hint: It's very short)
+
+---
+<div class="slide-author" data-name="Rishab Manocha"></div>
+
+<div class="domino-box large">
+  <div class="domino-top">#</div>
+  <div class="domino-bottom">#</div>
+</div>
+
+<p>Just use the separator domino from Part 5 alone!</p>
+
+<p> Top = "#" = Bottom &rarr; Match!</p>
+
+---
+
+<div class="slide-author" data-name="Rishab Manocha"></div>
+
+## The Problem
+
+This trivial match exists whether or not M accepts w
+
+We need to **force** the match to start with the first domino
+
+That's why we must convert MPCP to PCP properly
 
 ---
 
@@ -594,7 +640,11 @@ Then P = :
     <div class="domino-bottom">&ast;b<sub>1</sub>&ast;</div>
   </div>
   <div class="domino-box">
-    <div class="domino-top">&ast;t<sub>2</sub></div>
+    <div class="domino-top">t<sub>1</sub>&ast;</div>
+    <div class="domino-bottom">b<sub>1</sub>&ast;</div>
+  </div>
+  <div class="domino-box">
+    <div class="domino-top">t<sub>2</sub>&ast;</div>
     <div class="domino-bottom">b<sub>2</sub>&ast;</div>
   </div>
   <div class="domino-box">
@@ -602,7 +652,7 @@ Then P = :
     <div class="domino-bottom">&hellip;</div>
   </div>
   <div class="domino-box">
-    <div class="domino-top">&ast;t<sub>k</sub></div>
+    <div class="domino-top">t<sub>k</sub>&ast;</div>
     <div class="domino-bottom">b<sub>k</sub>&ast;</div>
   </div>
   <div class="domino-box">
