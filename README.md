@@ -101,7 +101,7 @@ GitHub Pages is deployed by `.github/workflows/deploy.yml`.
 - presentation/slide_content.md
 - logs/shahbaaz_log.md
 
-## Nicole's Development Process when first creating this repo before Rishab added more stuff
+## Nicole's Development Process when first creating this repo before Rishab added more stuff:
 
 During development, several issues were encountered and resolved:
 
