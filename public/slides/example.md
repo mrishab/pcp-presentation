@@ -63,11 +63,8 @@ Let's just try it and see what happens.
     <span class="match-label">Bottom:</span>
     <span class="match-content">aaa</span>
   </div>
-  <div class="match-note">
-    Bottom is already 2 characters ahead — we need to catch up somehow.
-  </div>
 </div>
-</div>
+Bottom is already 2 characters ahead — we need to catch up somehow.
 
 ---
 
@@ -174,6 +171,9 @@ Both reach the same string, just by different routes. That's the whole game.
     <span class="match-content">aaa + aa = <strong>aaaaa</strong></span>
   </div>
 </div>
+
+---
+
 <div class="highlight-box">
   ❌ Off by one — not every sequence works, even on a solvable instance
 </div>
