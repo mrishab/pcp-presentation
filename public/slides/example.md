@@ -107,9 +107,7 @@ Top gained more than bottom this time — still 1 behind though.
     <span class="match-content">aaaa + a = <strong>aaaaa</strong></span>
   </div>
 </div>
-<div class="highlight-box">
   ✅ Got it! Sequence [1, 2, 2] gives us <strong>aaaaa</strong> on both sides
-</div>
 
 ---
 
@@ -171,12 +169,7 @@ Both reach the same string, just by different routes. That's the whole game.
     <span class="match-content">aaa + aa = <strong>aaaaa</strong></span>
   </div>
 </div>
-
----
-
-<div class="highlight-box">
   ❌ Off by one — not every sequence works, even on a solvable instance
-</div>
 
 ---
 
