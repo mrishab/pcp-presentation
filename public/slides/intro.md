@@ -1,10 +1,16 @@
 # Undecidability & The Post Correspondence Problem
 
+---
+
 ## What is this topic?
 This presentation explores the concept of **undecidability** in theoretical computer science using the **Post Correspondence Problem (PCP)**.
 
+---
+
 ## Field
 This topic belongs to the study of **Theory of Computation**, which focuses on what problems can and cannot be solved by algorithms.
+
+---
 
 ## Key Terms
 - **Algorithm**: A step-by-step procedure used to solve a problem  
