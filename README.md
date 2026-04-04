@@ -100,3 +100,15 @@ GitHub Pages is deployed by `.github/workflows/deploy.yml`.
 - presentation/intro.md
 - presentation/slide_content.md
 - logs/shahbaaz_log.md
+
+## Nicole's Development Process when first creating this repo before Rishab added more stuff
+
+During development, several issues were encountered and resolved:
+
+- Plugin loading errors due to incorrect file paths (404 errors)  
+- Markdown slides not rendering due to missing or misconfigured plugins  
+- Module-related issues when using `.mjs` files  
+- Resolved by switching to browser-compatible `.js` plugin files  
+- Tested presentation locally using a Python HTTP server  
+
+These steps ensured the final presentation runs correctly.
