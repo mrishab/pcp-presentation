@@ -63,11 +63,11 @@ Let's just try it and see what happens.
     <span class="match-label">Bottom:</span>
     <span class="match-content">aaa</span>
   </div>
+  <div class="match-note">
+    Bottom is already 2 characters ahead — we need to catch up somehow.
+  </div>
 </div>
-
----
-
-Bottom is already 2 characters ahead — we need to catch up somehow.
+</div>
 
 ---
 
@@ -113,8 +113,6 @@ Top gained more than bottom this time — still 1 behind though.
     <span class="match-content">aaaa + a = <strong>aaaaa</strong></span>
   </div>
 </div>
-
----
 
 <div class="highlight-box">
   ✅ Got it! Sequence [1, 2, 2] gives us <strong>aaaaa</strong> on both sides
