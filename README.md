@@ -90,18 +90,20 @@ GitHub Pages is deployed by `.github/workflows/deploy.yml`.
 ### Shahbaaz Gill – Intro + Background
 
 **Responsibilities:**
+
 - Introduced the concept of undecidability
 - Provided intuitive explanation of the domino-style (PCP) problem
 - Explained why the topic matters in computer science
 - Created supporting documentation and presentation notes
 
 **Files contributed:**
+
 - public/slides/intro.md
 - presentation/intro.md
 - presentation/slide_content.md
 - logs/shahbaaz_log.md
 
-## Nicole's Development Process when first creating content in this repo before Rishab added more stuff:
+## Nicole's Development Process when first creating content in this repo before Rishab added more stuff
 
 During development, several issues were encountered and resolved:
 
