@@ -5,10 +5,14 @@
 ## What is this topic?
 This presentation explores the concept of **undecidability** in theoretical computer science using the **Post Correspondence Problem (PCP)**.
 
+<div class="slide-author" data-name="Shahbaaz Gill"></div>
+
 ---
 
 ## Field
 This topic belongs to the study of **Theory of Computation**, which focuses on what problems can and cannot be solved by algorithms.
+
+<div class="slide-author" data-name="Shahbaaz Gill"></div>
 
 ---
 
@@ -18,6 +22,8 @@ This topic belongs to the study of **Theory of Computation**, which focuses on w
 - **Decidable Problem**: A problem that can be solved by an algorithm for all inputs  
 - **Undecidable Problem**: A problem for which no algorithm can always determine the correct answer  
 
+<div class="slide-author" data-name="Shahbaaz Gill"></div>
+
 ---
 
 ## Why This Topic Matters
@@ -25,6 +31,8 @@ This topic belongs to the study of **Theory of Computation**, which focuses on w
 - It shows that not all problems can be solved by computers  
 - It defines the **limits of computation**, even with unlimited time and resources  
 - It helps us understand the boundary between what is computationally possible and impossible  
+
+<div class="slide-author" data-name="Shahbaaz Gill"></div>
 
 ---
 
@@ -35,6 +43,8 @@ A problem is **decidable** if there exists an algorithm (or Turing Machine) that
 - Always halts  
 - Correctly outputs **YES** or **NO** for every possible input  
 
+<div class="slide-author" data-name="Shahbaaz Gill"></div>
+
 ---
 
 ## Intuition for the Problem
@@ -43,6 +53,8 @@ The Post Correspondence Problem involves matching sequences of strings using dom
 
 At first glance, this seems like a problem a computer should be able to solve.
 
+<div class="slide-author" data-name="Shahbaaz Gill"></div>
+
 ---
 
 ## Transition
@@ -50,3 +62,5 @@ At first glance, this seems like a problem a computer should be able to solve.
 However, this problem turns out to be **undecidable**.  
 
 In the next section, we will explore the Post Correspondence Problem in detail and see how it leads to this surprising result.
+
+<div class="slide-author" data-name="Shahbaaz Gill"></div>
