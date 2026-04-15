@@ -1,6 +1,12 @@
 ## What is the Problem?
 
-The Post Correspondence Problem is problem of undecidability with the manipulation of strings. Undecidability is to say that we cannot construct a Turing machine for this language. The goal is to prove its undecidability.
+The Post Correspondence Problem (PCP) is an example of an **undecidable problem**.
+
+This means there is no algorithm (or Turing machine) that can always determine whether a given PCP instance has a match.
+
+- **Given:** a set of dominoes (pairs of strings)  
+- **Goal:** find a sequence so the top and bottom match  
+- **Question:** does such a sequence exist?
 
 <div class="slide-author" data-name="Reet Singh"></div>
 
@@ -8,9 +14,9 @@ The Post Correspondence Problem is problem of undecidability with the manipulati
 
 ## Simple Example
 
-The common example to understand the concept is that of dominoes. Consider a collection of dominoes, each with one string on the top and one string on the bottom. 
+The common example used to introduce PCP is with dominoes. Each domino has one string on the top and one on the bottom.
 
-$$ \set{\left[\frac{a}{ab}\right], \left[\frac{abc}{c}\right], \left[\frac{ca}{a}\right], \left[\frac{b}{cd}\right] } $$
+$$\left\{ \left[\frac{b}{ca}\right], \left[\frac{a}{ab}\right], \left[\frac{ca}{a}\right], \left[\frac{abc}{c}\right] \right\}$$
 
 <div class="slide-author" data-name="Reet Singh"></div>
 
@@ -18,17 +24,27 @@ $$ \set{\left[\frac{a}{ab}\right], \left[\frac{abc}{c}\right], \left[\frac{ca}{a
 
 ## Simple Example (cont.)
 
-The goal is to make the string at the top equals the string on the bottom using the strings given in the original problem. This is referred to as a match. 
-Repetition of strings is allowed *but* we cannot split strings into their individual characters.
+The goal is to construct a sequence of dominoes so the top and bottom strings are identical.
+
+- Dominoes can be reused  
+- Strings cannot be split into individual characters
 
 <div class="slide-author" data-name="Reet Singh"></div>
 
 ---
-From the example above, our result would be the following.
-$$\set{\left[\frac{a}{ab}\right], \left[\frac{b}{ca}\right], \left[\frac{ca}{a}\right], \left[\frac{abc}{c}\right]}$$
 
-The top is $abcdabcd$ and the bottom is $abcdabcd$, both strings are the same so we have a match.
-For the proof, we modify this problem to make the match start with the first domino, ($\left[ \frac{a}{ab} \right]$ would be the start of our simple example). This is called the Modified Post Correspondence Problem (MPCP).
+One possible matching sequence is:
+
+$$\left\{ \left[\frac{a}{ab}\right], \left[\frac{b}{ca}\right], \left[\frac{ca}{a}\right], \left[\frac{a}{ab}\right], \left[\frac{abc}{c}\right] \right\}$$
+
+Top: $abcaaabc$  
+Bottom: $abcaaabc$
+
+So we have a match.
+
+For the proof, we modify the problem to require the sequence to start with the first domino, $\left[\frac{a}{ab}\right]$.
+
+This is called the Modified Post Correspondence Problem (MPCP).
 
 <div class="slide-author" data-name="Reet Singh"></div>
 
@@ -36,6 +52,18 @@ For the proof, we modify this problem to make the match start with the first dom
 
 ## The Problem
 
-A turing machine cannot determine if a domino set has a match for every possible input. It is impossible as it would be uncomputable. The proof will work by showing that if we could solve the PCP, we could solve the problem of if a turing machine accepts a given input. We will construct a turing machine for a specific input for a specific set of domino where we can build a match by simulating the turing machine's computation step by step. A complete match will only exist if the machine reaches an accepting state. 
+- No algorithm can always determine if a PCP instance has a match
+- We prove this by reduction from Turing Machine acceptance
+
+---
+
+- Idea:
+  - Convert a Turing Machine into a PCP instance
+  - Dominoes simulate the machine’s computation
+
+---
+
+- A match exists  
+  ⇔ the Turing Machine accepts the input
 
 <div class="slide-author" data-name="Reet Singh"></div>

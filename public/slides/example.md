@@ -8,24 +8,24 @@
 
 ## Here's our domino set
 
-Three dominoes, all over the alphabet {a}:
+Three dominoes over the alphabet {a, b}:
 
 <div class="domino-row">
   <div class="domino-box large">
-    <div class="domino-top">a</div>
-    <div class="domino-bottom">aaa</div>
-  </div>
-  <div class="domino-box large">
-    <div class="domino-top">aa</div>
+    <div class="domino-top">ab</div>
     <div class="domino-bottom">a</div>
   </div>
   <div class="domino-box large">
-    <div class="domino-top">aaa</div>
-    <div class="domino-bottom">aa</div>
+    <div class="domino-top">b</div>
+    <div class="domino-bottom">bb</div>
+  </div>
+  <div class="domino-box large">
+    <div class="domino-top">a</div>
+    <div class="domino-bottom">ba</div>
   </div>
 </div>
 
-We need to pick a sequence of these (repeats allowed) so the tops and bottoms line up.
+We need to pick a sequence of these (repeats allowed) so the top and bottom strings line up.
 
 ---
 
@@ -49,22 +49,23 @@ Let's just try it and see what happens.
 
 <div class="domino-row">
   <div class="domino-box large">
-    <div class="domino-top">a</div>
-    <div class="domino-bottom">aaa</div>
+    <div class="domino-top">ab</div>
+    <div class="domino-bottom">a</div>
   </div>
 </div>
 
 <div class="match-visual">
   <div class="match-row">
     <span class="match-label">Top:</span>
-    <span class="match-content">a</span>
+    <span class="match-content">ab</span>
   </div>
   <div class="match-row">
     <span class="match-label">Bottom:</span>
-    <span class="match-content">aaa</span>
+    <span class="match-content">a</span>
   </div>
 </div>
-Bottom is already 2 characters ahead — we need to catch up somehow.
+
+Top is ahead — we need to match the extra "b".
 
 ---
 
@@ -74,40 +75,23 @@ Bottom is already 2 characters ahead — we need to catch up somehow.
 
 <div class="domino-row">
   <div class="domino-box large">
-    <div class="domino-top">aa</div>
-    <div class="domino-bottom">a</div>
+    <div class="domino-top">b</div>
+    <div class="domino-bottom">bb</div>
   </div>
 </div>
 
 <div class="match-visual">
   <div class="match-row">
     <span class="match-label">Top:</span>
-    <span class="match-content">a + aa = <strong>aaa</strong></span>
+    <span class="match-content">ab + b = <strong>abb</strong></span>
   </div>
   <div class="match-row">
     <span class="match-label">Bottom:</span>
-    <span class="match-content">aaa + a = <strong>aaaa</strong></span>
+    <span class="match-content">a + bb = <strong>abb</strong></span>
   </div>
 </div>
-Top gained more than bottom this time — still 1 behind though.
 
----
-
-<div class="slide-author" data-name="Tolu Adekore"></div>
-
-## Add domino 2 again
-
-<div class="match-visual">
-  <div class="match-row">
-    <span class="match-label">Top:</span>
-    <span class="match-content">aaa + aa = <strong>aaaaa</strong></span>
-  </div>
-  <div class="match-row">
-    <span class="match-label">Bottom:</span>
-    <span class="match-content">aaaa + a = <strong>aaaaa</strong></span>
-  </div>
-</div>
-  ✅ Got it! Sequence [1, 2, 2] gives us <strong>aaaaa</strong> on both sides
+✅ Now they match!
 
 ---
 
@@ -117,30 +101,27 @@ Top gained more than bottom this time — still 1 behind though.
 
 <div class="domino-row">
   <div class="domino-box large">
-    <div class="domino-top">a</div>
-    <div class="domino-bottom">aaa</div>
-  </div>
-  <div class="domino-box large">
-    <div class="domino-top">aa</div>
+    <div class="domino-top">ab</div>
     <div class="domino-bottom">a</div>
   </div>
   <div class="domino-box large">
-    <div class="domino-top">aa</div>
-    <div class="domino-bottom">a</div>
+    <div class="domino-top">b</div>
+    <div class="domino-bottom">bb</div>
   </div>
 </div>
 
 <div class="match-visual">
   <div class="match-row">
     <span class="match-label">Top:</span>
-    <span class="match-content">a + aa + aa = <strong>aaaaa</strong></span>
+    <span class="match-content">ab + b = <strong>abb</strong></span>
   </div>
   <div class="match-row">
     <span class="match-label">Bottom:</span>
-    <span class="match-content">aaa + a + a = <strong>aaaaa</strong></span>
+    <span class="match-content">a + bb = <strong>abb</strong></span>
   </div>
 </div>
-Both reach the same string, just by different routes. That's the whole game.
+
+✅ Sequence [1, 2] gives a match.
 
 ---
 
@@ -150,26 +131,27 @@ Both reach the same string, just by different routes. That's the whole game.
 
 <div class="domino-row">
   <div class="domino-box large">
-    <div class="domino-top">a</div>
-    <div class="domino-bottom">aaa</div>
+    <div class="domino-top">ab</div>
+    <div class="domino-bottom">a</div>
   </div>
   <div class="domino-box large">
-    <div class="domino-top">aaa</div>
-    <div class="domino-bottom">aa</div>
+    <div class="domino-top">a</div>
+    <div class="domino-bottom">ba</div>
   </div>
 </div>
 
 <div class="match-visual">
   <div class="match-row">
     <span class="match-label">Top:</span>
-    <span class="match-content">a + aaa = <strong>aaaa</strong></span>
+    <span class="match-content">ab + a = <strong>aba</strong></span>
   </div>
   <div class="match-row">
     <span class="match-label">Bottom:</span>
-    <span class="match-content">aaa + aa = <strong>aaaaa</strong></span>
+    <span class="match-content">a + ba = <strong>aba</strong></span>
   </div>
 </div>
-  ❌ Off by one — not every sequence works, even on a solvable instance
+
+✅ This also matches — multiple sequences can work.
 
 ---
 
@@ -192,7 +174,11 @@ Both reach the same string, just by different routes. That's the whole game.
   </div>
 </div>
 
-No matter what sequence you try, top and bottom never match. The answer here is just **NO**.
+No matter what sequence you try, the top and bottom never match.
+
+No tile has the same last character on both top and bottom → the strings can never end the same.
+
+Therefore, no match exists.
 
 ---
 

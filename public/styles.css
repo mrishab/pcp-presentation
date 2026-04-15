@@ -40,6 +40,17 @@
     font-size: 0.9em;
 }
 
+/* Slide number styling */
+.reveal .slide-number {
+  top: 10px;
+  right: 20px;
+  bottom: auto;
+  left: auto;
+  font-size: 18px !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
 /* Math and definition boxes */
 .math-block {
     background: rgba(139, 92, 246, 0.15);
@@ -323,4 +334,28 @@
 /* Hide the author meta element in slides */
 .slide-author {
     display: none;
+}
+
+/* General slide text sizing */
+.reveal h1 {
+  font-size: 2.2em;
+}
+
+.reveal h2 {
+  font-size: 1.6em;
+}
+
+.reveal h3 {
+  font-size: 1.2em;
+}
+
+.reveal p,
+.reveal li {
+  font-size: 0.9em;
+}
+
+/* More space between bullet items */
+.reveal ul li,
+.reveal ol li {
+  margin-bottom: 0.35em;
 }

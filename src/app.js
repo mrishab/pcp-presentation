@@ -9,6 +9,7 @@ import RevealMath from 'reveal.js/plugin/math'
 
 Reveal.initialize({
   hash: true,
+  slideNumber: 'c/t',
   plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX],
 }).then(() => {
   const authorFooter = document.getElementById('author-footer');

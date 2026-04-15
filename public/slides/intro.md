@@ -3,7 +3,9 @@
 ---
 
 ## What is this topic?
-This presentation explores the concept of **undecidability** in theoretical computer science using the **Post Correspondence Problem (PCP)**.
+
+- Undecidability in theoretical computer science  
+- Studied through the **Post Correspondence Problem (PCP)**
 
 <div class="slide-author" data-name="Shahbaaz Gill"></div>
 
@@ -49,9 +51,11 @@ A problem is **decidable** if there exists an algorithm (or Turing Machine) that
 
 ## Intuition for the Problem
 
-The Post Correspondence Problem involves matching sequences of strings using domino-like tiles. Each tile has a string on the top and bottom, and the goal is to arrange them so both sides match exactly.
+- We are given domino-like tiles  
+- Each tile has a **top string** and **bottom string**  
+- Goal: arrange tiles so both strings match  
 
-At first glance, this seems like a problem a computer should be able to solve.
+At first, this seems easy — something a computer should solve.
 
 <div class="slide-author" data-name="Shahbaaz Gill"></div>
 
@@ -59,8 +63,9 @@ At first glance, this seems like a problem a computer should be able to solve.
 
 ## Transition
 
-However, this problem turns out to be **undecidable**.  
+- This problem turns out to be **undecidable**
+- No algorithm can always solve it  
 
-In the next section, we will explore the Post Correspondence Problem in detail and see how it leads to this surprising result.
+Next, we’ll explore the PCP in detail.
 
 <div class="slide-author" data-name="Shahbaaz Gill"></div>

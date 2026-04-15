@@ -12,7 +12,7 @@
 <strong>Theorem:</strong> PCP is undecidable.
 </div>
 
-There is no algorithm that can determine whether an arbitrary PCP instance has a match.
+There is no algorithm that can determine, for every input, whether a PCP instance has a match.
 
 ---
 
@@ -30,7 +30,7 @@ There is no algorithm that can determine whether an arbitrary PCP instance has a
 
 ## Halting Problem is Undecidable
 
-**Theorem:** There is no algorithm that can decide whether an arbitrary Turing Machine halts on a given input.
+**Theorem:** There is no algorithm that can decide, for every input, whether a Turing Machine halts.
 
 ---
 
@@ -41,7 +41,7 @@ There is no algorithm that can determine whether an arbitrary PCP instance has a
 Assume a decider H exists:
 
 <div class="math-block">
-H(&langle;M, w&rangle;) =
+H(⟨M, w⟩) =
 <span class="cases">
   accept &nbsp; if M halts on w<br>
   reject &nbsp; if M loops on w
@@ -57,8 +57,8 @@ H(&langle;M, w&rangle;) =
 Define a new TM D that uses H as a subroutine:
 
 <div class="code-block">
-D(&langle;M&rangle;):<br>
-&nbsp;&nbsp;1. Run H(&langle;M, &langle;M&rangle;&rangle;)<br>
+D(⟨M⟩):<br>
+&nbsp;&nbsp;1. Run H(⟨M, ⟨M⟩⟩)<br>
 &nbsp;&nbsp;2. If H accepts: loop forever<br>
 &nbsp;&nbsp;3. If H rejects: accept
 </div>
@@ -69,10 +69,10 @@ D(&langle;M&rangle;):<br>
 
 ## The Paradox
 
-What happens when we run D(&langle;D&rangle;)?
+What happens when we run D(⟨D⟩)?
 
-- If D halts on &langle;D&rangle; &rarr; H accepts &rarr; D loops
-- If D loops on &langle;D&rangle; &rarr; H rejects &rarr; D halts
+- If D halts on ⟨D⟩ → H accepts → D loops  
+- If D loops on ⟨D⟩ → H rejects → D halts
 
 **Contradiction!**
 
@@ -95,7 +95,7 @@ No algorithm can solve it for all inputs
 Define the acceptance problem:
 
 <div class="definition-box">
-A<sub>TM</sub> = { &langle;M, w&rangle; | M is a TM that accepts w }
+A<sub>TM</sub> = { ⟨M, w⟩ | M is a TM that accepts w }
 </div>
 
 A<sub>TM</sub> is also undecidable (by similar argument)
@@ -177,7 +177,7 @@ If PCP were decidable, then A<sub>TM</sub> would be decidable.
 ## MPCP Definition
 
 <div class="definition-box">
-MPCP = { &langle;P&rangle; | P is a PCP instance with a match<br>
+MPCP = { ⟨P⟩ | P is a PCP instance with a match<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<strong>that starts with the first domino</strong> }
 </div>
 
@@ -189,9 +189,8 @@ The only difference: match **must** begin with [t<sub>1</sub>/b<sub>1</sub>]
 
 ## Why MPCP?
 
-Forces the simulation to start correctly
-
-We control how the computation begins
+- Forces the simulation to start with the initial configuration  
+- Ensures the computation begins correctly
 
 ---
 
@@ -233,7 +232,7 @@ P&prime; has a match &hArr; M accepts w
 
 A match in P&prime; encodes an **accepting computation history** of M on w
 
-Each domino simulates one step of M
+Each domino simulates a single computation step of M
 
 ---
 
@@ -462,29 +461,9 @@ For every a &isin; &Gamma;, add:
 
 ## What This Does
 
-After M accepts, the head "eats" adjacent symbols
+After M reaches the accepting state, special dominos remove surrounding symbols.
 
-Allows top string to catch up with bottom string
-
----
-
-<div class="slide-author" data-name="Rishab Manocha"></div>
-
-## Visualization
-
-<div class="cleanup-visual small">
-  <div>a b q<sub>acc</sub> c d</div>
-  <div class="arrow">&darr;</div>
-  <div>a b q<sub>acc</sub> d</div>
-  <div class="arrow">&darr;</div>
-  <div>a q<sub>acc</sub> d</div>
-  <div class="arrow">&darr;</div>
-  <div>q<sub>acc</sub> d</div>
-  <div class="arrow">&darr;</div>
-  <div>q<sub>acc</sub></div>
-</div>
-
-<p class="small-note">Each step: q<sub>accept</sub> "eats" one adjacent symbol</p>
+This allows the top string to catch up with the bottom string until both strings are identical.
 
 ---
 
@@ -684,7 +663,7 @@ Any match **must** begin here!
 
 <div class="domino-box">
   <div class="domino-top">&ast;</div>
-  <div class="domino-bottom">(empty)</div>
+  <div class="domino-bottom">␣</div>
 </div>
 
 Allows top to add the trailing &ast; to complete the match
