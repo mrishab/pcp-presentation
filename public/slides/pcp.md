@@ -16,7 +16,11 @@ This means there is no algorithm (or Turing machine) that can always determine w
 
 The common example used to introduce PCP is with dominoes. Each domino has one string on the top and one on the bottom.
 
-$$\left\{ \left[\frac{b}{ca}\right], \left[\frac{a}{ab}\right], \left[\frac{ca}{a}\right], \left[\frac{abc}{c}\right] \right\}$$
+<div>
+\[
+\left\{ \left[\frac{b}{ca}\right], \left[\frac{a}{ab}\right], \left[\frac{ca}{a}\right], \left[\frac{abc}{c}\right] \right\}
+\]
+</div>
 
 <div class="slide-author" data-name="Reet Singh"></div>
 
@@ -35,7 +39,7 @@ The goal is to construct a sequence of dominoes so the top and bottom strings ar
 
 One possible matching sequence is:
 
-$$\left\{ \left[\frac{a}{ab}\right], \left[\frac{b}{ca}\right], \left[\frac{ca}{a}\right], \left[\frac{a}{ab}\right], \left[\frac{abc}{c}\right] \right\}$$
+<div>$$\left\{ \left[\frac{a}{ab}\right],\ \left[\frac{b}{ca}\right],\ \left[\frac{ca}{a}\right],\ \left[\frac{a}{ab}\right],\ \left[\frac{abc}{c}\right] \right\}$$</div>
 
 Top: $abcaaabc$  
 Bottom: $abcaaabc$
@@ -55,13 +59,13 @@ This is called the Modified Post Correspondence Problem (MPCP).
 - No algorithm can always determine if a PCP instance has a match
 - We prove this by reduction from Turing Machine acceptance
 
+<div class="slide-author" data-name="Reet Singh"></div>
+
 ---
 
 - Idea:
   - Convert a Turing Machine into a PCP instance
   - Dominoes simulate the machine’s computation
-
----
 
 - A match exists  
   ⇔ the Turing Machine accepts the input

@@ -564,22 +564,22 @@ Modify dominos so only the first one **can** start a match
 
 <div class="slide-author" data-name="Rishab Manocha"></div>
 
-## The &ast; Transformation
+## The ◇ Transformation
 
 For any string u = u<sub>1</sub>u<sub>2</sub>&hellip;u<sub>n</sub>, define:
 
 <div class="transform-box">
   <div class="transform-row">
-    <span class="transform-name">&ast;u</span>
-    <span class="transform-def">= &ast;u<sub>1</sub>&ast;u<sub>2</sub>&ast;&hellip;&ast;u<sub>n</sub></span>
+    <span class="transform-name">◇u</span>
+    <span class="transform-def">= ◇u<sub>1</sub>◇u<sub>2</sub>◇&hellip;◇u<sub>n</sub></span>
   </div>
   <div class="transform-row">
-    <span class="transform-name">u&ast;</span>
-    <span class="transform-def">= u<sub>1</sub>&ast;u<sub>2</sub>&ast;&hellip;&ast;u<sub>n</sub>&ast;</span>
+    <span class="transform-name">u◇</span>
+    <span class="transform-def">= u<sub>1</sub>◇u<sub>2</sub>◇&hellip;◇u<sub>n</sub>◇</span>
   </div>
   <div class="transform-row">
-    <span class="transform-name">&ast;u&ast;</span>
-    <span class="transform-def">= &ast;u<sub>1</sub>&ast;u<sub>2</sub>&ast;&hellip;&ast;u<sub>n</sub>&ast;</span>
+    <span class="transform-name">◇u◇</span>
+    <span class="transform-def">= ◇u<sub>1</sub>◇u<sub>2</sub>◇&hellip;◇u<sub>n</sub>◇</span>
   </div>
 </div>
 
@@ -592,9 +592,9 @@ For any string u = u<sub>1</sub>u<sub>2</sub>&hellip;u<sub>n</sub>, define:
 Let u = abc
 
 <div class="example-box">
-  <div>&ast;u = &ast;a&ast;b&ast;c</div>
-  <div>u&ast; = a&ast;b&ast;c&ast;</div>
-  <div>&ast;u&ast; = &ast;a&ast;b&ast;c&ast;</div>
+  <div>◇u = ◇a◇b◇c</div>
+  <div>u◇ = a◇b◇c◇</div>
+  <div>◇u◇ = ◇a◇b◇c◇</div>
 </div>
 
 ---
@@ -615,27 +615,27 @@ Then P = :
 
 <div class="domino-row small">
   <div class="domino-box">
-    <div class="domino-top">&ast;t<sub>1</sub></div>
-    <div class="domino-bottom">&ast;b<sub>1</sub>&ast;</div>
+    <div class="domino-top">◇t<sub>1</sub></div>
+    <div class="domino-bottom">◇b<sub>1</sub>◇</div>
   </div>
   <div class="domino-box">
-    <div class="domino-top">t<sub>1</sub>&ast;</div>
-    <div class="domino-bottom">b<sub>1</sub>&ast;</div>
+    <div class="domino-top">t<sub>1</sub>◇</div>
+    <div class="domino-bottom">b<sub>1</sub>◇</div>
   </div>
   <div class="domino-box">
-    <div class="domino-top">t<sub>2</sub>&ast;</div>
-    <div class="domino-bottom">b<sub>2</sub>&ast;</div>
+    <div class="domino-top">t<sub>2</sub>◇</div>
+    <div class="domino-bottom">b<sub>2</sub>◇</div>
   </div>
   <div class="domino-box">
     <div class="domino-top">&hellip;</div>
     <div class="domino-bottom">&hellip;</div>
   </div>
   <div class="domino-box">
-    <div class="domino-top">t<sub>k</sub>&ast;</div>
-    <div class="domino-bottom">b<sub>k</sub>&ast;</div>
+    <div class="domino-top">t<sub>k</sub>◇</div>
+    <div class="domino-bottom">b<sub>k</sub>◇</div>
   </div>
   <div class="domino-box">
-    <div class="domino-top">&ast;</div>
+    <div class="domino-top">◇</div>
     <div class="domino-bottom">&empty;</div>
   </div>
 </div>
@@ -647,11 +647,11 @@ Then P = :
 ## Why This Works
 
 <div class="domino-box highlight">
-  <div class="domino-top">&ast;t<sub>1</sub></div>
-  <div class="domino-bottom">&ast;b<sub>1</sub>&ast;</div>
+  <div class="domino-top">◇t<sub>1</sub></div>
+  <div class="domino-bottom">◇b<sub>1</sub>◇</div>
 </div>
 
-**Only** this domino has &ast; at the start of **both** top and bottom
+**Only** this domino has ◇ at the start of **both** top and bottom
 
 Any match **must** begin here!
 
@@ -662,11 +662,11 @@ Any match **must** begin here!
 ## The Final Domino
 
 <div class="domino-box">
-  <div class="domino-top">&ast;</div>
+  <div class="domino-top">◇</div>
   <div class="domino-bottom">␣</div>
 </div>
 
-Allows top to add the trailing &ast; to complete the match
+Allows top to add the trailing ◇ to complete the match
 
 ---
 
@@ -675,7 +675,7 @@ Allows top to add the trailing &ast; to complete the match
 ## Correctness
 
 - Original symbols appear at even positions
-- &ast; symbols interleave but don't affect matching
+- ◇ symbols interleave but don't affect matching
 - First domino is forced &rarr; MPCP constraint satisfied
 
 ---

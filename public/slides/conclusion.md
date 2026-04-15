@@ -1,10 +1,10 @@
-<div class="slide-author" data-name="Tolu Adekore"></div>
+<div class="slide-author" data-name="Nicole Zino"></div>
 
 # Wrapping Up
 
 ---
 
-<div class="slide-author" data-name="Tolu Adekore"></div>
+<div class="slide-author" data-name="Nicole Zino"></div>
 
 ## Here's what we went through
 
@@ -15,7 +15,7 @@
 
 ---
 
-<div class="slide-author" data-name="Tolu Adekore"></div>
+<div class="slide-author" data-name="Nicole Zino"></div>
 
 ## The reduction chain one more time
 
@@ -33,7 +33,7 @@ So PCP can't have a decider either.
 
 ---
 
-<div class="slide-author" data-name="Tolu Adekore"></div>
+<div class="slide-author" data-name="Nicole Zino"></div>
 
 ## The wild part
 
@@ -45,7 +45,7 @@ That's what makes it such a useful example. It shows undecidability shows up in 
 
 ---
 
-<div class="slide-author" data-name="Tolu Adekore"></div>
+<div class="slide-author" data-name="Nicole Zino"></div>
 
 ## This stuff actually comes up in the real world
 
@@ -57,7 +57,7 @@ Knowing where the hard limits are saves you from chasing solutions that don't ex
 
 ---
 
-<div class="slide-author" data-name="Tolu Adekore"></div>
+<div class="slide-author" data-name="Nicole Zino"></div>
 
 ## The big takeaway
 
@@ -66,7 +66,7 @@ Knowing where the hard limits are saves you from chasing solutions that don't ex
   It's simple enough to explain to anyone, but hard enough that no algorithm can solve it.
 </div>
 
---- 
+---
 
 ## Reflection
 
