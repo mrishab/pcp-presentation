@@ -6,18 +6,9 @@
 
 <div class="slide-author" data-name="Nicole Zino"></div>
 
-## Here's what we went through
+## Key Takeaway
 
-- **Decidability** — what it even means for a problem to be solvable by an algorithm
-- **PCP** — a deceptively simple puzzle about matching strings
-- **The undecidability proof** — showing PCP is as hard as A<sub>TM</sub> via reduction
-- **A worked example** — trying it out on real domino sets, seeing both sides
-
----
-
-<div class="slide-author" data-name="Nicole Zino"></div>
-
-## The reduction chain one more time
+PCP looks like a string puzzle, but it can encode arbitrary computation.
 
 <div class="reduction-chain large">
   <span class="chain-node">A<sub>TM</sub></span>
@@ -27,7 +18,7 @@
   <span class="chain-node">PCP</span>
 </div>
 
-If PCP had a decider, we could use it to decide A<sub>TM</sub> — which we know is impossible.
+If PCP had a decider, we could use it to decide A<sub>TM</sub>, which we know is impossible.
 
 So PCP can't have a decider either.
 
@@ -35,23 +26,23 @@ So PCP can't have a decider either.
 
 <div class="slide-author" data-name="Nicole Zino"></div>
 
-## The wild part
+## Why This Matters
 
 <div class="highlight-box">
-  PCP looks nothing like a Turing Machine — yet it can encode one.
+  PCP looks nothing like a Turing Machine. Yet it can encode one.
 </div>
 
-That's what makes it such a useful example. It shows undecidability shows up in problems that have nothing to do with machines or computation on the surface.
+That's why undecidability shows up in problems that don't look like "computation" on the surface.
 
 ---
 
 <div class="slide-author" data-name="Nicole Zino"></div>
 
-## This stuff actually comes up in the real world
+## Real-World Implications
 
-- **Bug detection** — you can't write a tool that catches every possible bug automatically
-- **Compilers** — some code analyses are provably impossible to get right in every case
-- **AI & verification** — there are questions about program behavior that no system can always answer
+- **Bug detection**: you can't write a tool that catches every possible bug automatically
+- **Compilers**: some code analyses are provably impossible to get right in every case
+- **AI & verification**: there are questions about program behavior that no system can always answer
 
 Knowing where the hard limits are saves you from chasing solutions that don't exist.
 
@@ -59,29 +50,12 @@ Knowing where the hard limits are saves you from chasing solutions that don't ex
 
 <div class="slide-author" data-name="Nicole Zino"></div>
 
-## The big takeaway
+## One Sentence
 
 <div class="theorem-box">
-  Some problems just don't have general solutions — and PCP is a perfect example.
+  Some problems just don't have general solutions. PCP is a perfect example.
   It's simple enough to explain to anyone, but hard enough that no algorithm can solve it.
 </div>
-
----
-
-## Reflection
-
-- **What worked well:**
-  - Clear division of topics between team members  
-  - Visual approach (domino examples) helped simplify complex ideas  
-
-- **What could be improved:**
-  - Earlier coordination on slide structure  
-  - More time for final polish and consistency  
-
-- **Overall:**
-  - Strong collaboration and deeper understanding of undecidability concepts
-
-<div class="slide-author" data-name="Nicole Zino"></div>
 
 ---
 

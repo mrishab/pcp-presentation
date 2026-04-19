@@ -4,26 +4,26 @@
     flex-direction: column;
     border: 2px solid #58a6ff;
     border-radius: 8px;
-    margin: 0.5em;
+    margin: 0.35em;
     min-width: 80px;
     background: rgba(88, 166, 255, 0.1);
     overflow: hidden;
 }
 
 .domino-box.large {
-    min-width: 120px;
-    font-size: 1.2em;
+    min-width: 105px;
+    font-size: 1.05em;
 }
 
 .domino-top {
-    padding: 0.5em 1em;
+    padding: 0.4em 0.8em;
     border-bottom: 2px solid #58a6ff;
     background: rgba(88, 166, 255, 0.15);
     font-family: 'Fira Code', monospace;
 }
 
 .domino-bottom {
-    padding: 0.5em 1em;
+    padding: 0.4em 0.8em;
     font-family: 'Fira Code', monospace;
 }
 
@@ -32,7 +32,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 0.5em;
+    gap: 0.35em;
 }
 
 .domino-row.small .domino-box {
@@ -82,6 +82,23 @@
     padding: 1em 1.5em;
     margin: 1em auto;
     max-width: 85%;
+}
+
+/* Tighter layout for the proof intro slide */
+.reveal .slides section.goal-strategy .theorem-box,
+.reveal .slides section.goal-strategy .definition-box,
+.reveal .slides section.goal-strategy .highlight-box {
+  padding: 0.6em 0.9em;
+  margin: 0.6em auto;
+  max-width: 88%;
+}
+
+.reveal .slides section.goal-strategy .reduction-chain {
+  margin: 0.9em 0;
+}
+
+.reveal .slides section.goal-strategy .chain-node {
+  padding: 0.35em 0.75em;
 }
 
 .highlight-box {
@@ -190,8 +207,8 @@
     background: rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 8px;
-    padding: 1em;
-    margin: 1em auto;
+    padding: 0.75em;
+    margin: 0.75em auto;
     max-width: 90%;
 }
 
@@ -204,12 +221,14 @@
     display: flex;
     align-items: center;
     font-family: 'Fira Code', monospace;
+    gap: 0.6em;
+    flex-wrap: wrap;
 }
 
 .match-label {
-    min-width: 180px;
-    text-align: center;
-    margin-right: 1em;
+    min-width: 120px;
+    text-align: left;
+    margin-right: 0;
     color: #94a3b8;
     font-weight: 600;
     flex-shrink: 0;
@@ -226,8 +245,25 @@
     flex-direction: column;
     align-items: center;
     gap: 0.5em;
-    margin: 1em 0;
+    margin: 0;
     font-family: 'Fira Code', monospace;
+}
+
+.transition-visual.horizontal {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75em;
+}
+
+.transition-visual.horizontal .before,
+.transition-visual.horizontal .after {
+    padding: 0;
+}
+
+.transition-visual.horizontal .arrow {
+    font-size: 1.4em;
 }
 
 .transition-visual .arrow {
@@ -279,6 +315,7 @@
 
 .transform-def {
     flex: 1;
+    margin-left:2rem;
 }
 
 /* Cleanup visualization */
@@ -339,6 +376,21 @@
 }
 
 /* General slide text sizing */
+.reveal {
+  /* Slightly smaller base size reduces awkward wraps */
+  font-size: 34px;
+}
+
+.reveal .slides section {
+  /* Avoid focused centering for text-heavy slides */
+  text-align: left;
+}
+
+.reveal .slides section.center,
+.reveal .slides section.has-dark-background.center {
+  text-align: center;
+}
+
 .reveal h1 {
   font-size: 2.2em;
 }
@@ -354,6 +406,11 @@
 .reveal p,
 .reveal li {
   font-size: 0.9em;
+}
+
+.reveal ul,
+.reveal ol {
+  line-height: 1.25;
 }
 
 /* More space between bullet items */
