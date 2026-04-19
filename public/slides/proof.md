@@ -504,13 +504,13 @@ Allows top to add the trailing ◇ to complete the match
 
 ---
 
-<div class="slide-author" data-name="Rishab Manocha"></div>
+<div class="slide-author" data-name="Nicole Zino"></div>
 
 ## 5. Putting It All Together
 
 ---
 
-<div class="slide-author" data-name="Rishab Manocha"></div>
+<div class="slide-author" data-name="Nicole Zino"></div>
 
 ## 5.1 The Reduction Chain
 
@@ -524,7 +524,7 @@ Allows top to add the trailing ◇ to complete the match
 
 ---
 
-<div class="slide-author" data-name="Rishab Manocha"></div>
+<div class="slide-author" data-name="Nicole Zino"></div>
 
 ## 5.2 The Logic
 
@@ -536,7 +536,7 @@ Allows top to add the trailing ◇ to complete the match
 
 ---
 
-<div class="slide-author" data-name="Rishab Manocha"></div>
+<div class="slide-author" data-name="Nicole Zino"></div>
 
 ## 5.3 Therefore
 

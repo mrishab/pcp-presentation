@@ -59,6 +59,23 @@ Knowing where the hard limits are saves you from chasing solutions that don't ex
 
 ---
 
+## Reflection
+
+- **What worked well:**
+  - Dividing the topic into PCP background, examples, and proof helped us explain a difficult concept more clearly  
+  - Using visual domino examples made the undecidability proof easier for the audience to follow  
+
+- **What could be improved:**
+  - We should have reduced repetition and slide count much earlier instead of overloading the presentation with too many slides  
+  - Earlier coordination on structure, pacing, and consistency would have made the final presentation stronger and more polished  
+
+- **Overall:**
+  - This project improved our understanding of reductions, undecidability, and how simple-looking problems like PCP can represent much deeper computational limits  
+
+<div class="slide-author" data-name="Nicole Zino"></div>
+
+---
+
 # Questions?
 
 ---
