@@ -56,7 +56,7 @@ PCP match exists &hArr; the TM has an accepting computation history on w.
 
 ---
 
-<div class="slide-author" data-name="Nicole Zino"></div>
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## 2. Define MPCP
 
@@ -70,13 +70,13 @@ MPCP = { ⟨P⟩ | P is a PCP instance with a match that starts with the first d
 
 ---
 
-<div class="slide-author" data-name="Tolu Adekore"></div>
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## 3. Reduce A<sub>TM</sub> to MPCP
 
 ---
 
-<div class="slide-author" data-name="Tolu Adekore"></div>
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## 3.1 Construction
 
@@ -90,7 +90,7 @@ P&prime; has a match &hArr; M accepts w
 
 ---
 
-<div class="slide-author" data-name="Tolu Adekore"></div>
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## 3.2 Key Idea
 
@@ -100,7 +100,7 @@ Each domino simulates a single computation step of M
 
 ---
 
-<div class="slide-author" data-name="Tolu Adekore"></div>
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## 3.3 Configurations
 
@@ -115,7 +115,7 @@ A configuration represents the TM state at one moment:
 
 ---
 
-<div class="slide-author" data-name="Tolu Adekore"></div>
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## 3.4 Initial Domino
 
@@ -128,7 +128,7 @@ This **must** be the first domino in any match (MPCP requirement)
 
 ---
 
-<div class="slide-author" data-name="Tolu Adekore"></div>
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## 3.5 Why This Starts the Simulation
 
@@ -147,7 +147,7 @@ Bottom is "ahead" &mdash; top must catch up by simulating M
 
 ---
 
-<div class="slide-author" data-name="Tolu Adekore"></div>
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## 3.6 Right Moves
 
@@ -172,11 +172,9 @@ If &delta;(q, a) = (r, b, R), add:
   </div>
 </div>
 
- 
-
 ---
 
-<div class="slide-author" data-name="Tolu Adekore"></div>
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## 3.7 Left Moves
 
@@ -205,7 +203,7 @@ If &delta;(q, a) = (r, b, L), add:
 
 ---
 
-<div class="slide-author" data-name="Tolu Adekore"></div>
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## 3.8 Copy Symbols
 
@@ -220,7 +218,7 @@ For every a &isin; &Gamma;, add:
 
 ---
 
-<div class="slide-author" data-name="Tolu Adekore"></div>
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## 3.9 Configuration Separators
 
@@ -240,7 +238,7 @@ For every a &isin; &Gamma;, add:
 
 ---
 
-<div class="slide-author" data-name="Tolu Adekore"></div>
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## 3.10 Accepting State Cleanup
 
@@ -261,7 +259,7 @@ After M reaches the accepting state, special dominos remove surrounding symbols 
 
 ---
 
-<div class="slide-author" data-name="Tolu Adekore"></div>
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## 3.11 Final Domino
 
@@ -276,7 +274,7 @@ Match complete &hArr; M accepted w
 
 ---
 
-<div class="slide-author" data-name="Tolu Adekore"></div>
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## 3.12 Why Not Use P&prime; as PCP?
 
@@ -286,7 +284,7 @@ If we view P&prime; as a PCP instance (not MPCP), it <strong>always</strong> has
 
 ---
 
-<div class="slide-author" data-name="Tolu Adekore"></div>
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## 3.13 Tile Summary (P&prime;)
 
@@ -333,13 +331,13 @@ All *Types* of dominos we added
 
 ---
 
-<div class="slide-author" data-name="Tolu Adekore"></div>
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 Where is a **trivial match** hiding if we allow a PCP match to start anywhere?
 
 ---
 
-<div class="slide-author" data-name="Tolu Adekore"></div>
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## 3.14 The Trivial Match
 
@@ -354,7 +352,7 @@ Where is a **trivial match** hiding if we allow a PCP match to start anywhere?
 
 ---
 
-<div class="slide-author" data-name="Tolu Adekore"></div>
+<div class="slide-author" data-name="Rishab Manocha"></div>
 
 ## 3.15 Why This Is a Problem
 
@@ -366,13 +364,13 @@ That's why we must convert MPCP to PCP properly
 
 ---
 
-<div class="slide-author" data-name="Rishab Manocha"></div>
+<div class="slide-author" data-name="Tolu Adekore"></div>
 
 ## 4. Reduce MPCP to PCP
 
 ---
 
-<div class="slide-author" data-name="Rishab Manocha"></div>
+<div class="slide-author" data-name="Tolu Adekore"></div>
 
 ## 4.1 The Problem
 
@@ -382,7 +380,7 @@ PCP: match can start with **any** domino
 
 ---
 
-<div class="slide-author" data-name="Rishab Manocha"></div>
+<div class="slide-author" data-name="Tolu Adekore"></div>
 
 ## 4.2 Solution: Force the Start
 
@@ -390,7 +388,7 @@ Modify dominos so only the first one **can** start a match
 
 ---
 
-<div class="slide-author" data-name="Rishab Manocha"></div>
+<div class="slide-author" data-name="Tolu Adekore"></div>
 
 ## 4.3 The ◇ Transformation
 
@@ -413,7 +411,7 @@ For any string u = u<sub>1</sub>u<sub>2</sub>&hellip;u<sub>n</sub>, define:
 
 ---
 
-<div class="slide-author" data-name="Rishab Manocha"></div>
+<div class="slide-author" data-name="Tolu Adekore"></div>
 
 ## 4.4 Example
 
@@ -427,7 +425,7 @@ Let u = abc
 
 ---
 
-<div class="slide-author" data-name="Rishab Manocha"></div>
+<div class="slide-author" data-name="Tolu Adekore"></div>
 
 ## 4.5 New Domino Set
 
@@ -466,7 +464,7 @@ Given P&prime; = { [t<sub>1</sub>/b<sub>1</sub>], [t<sub>2</sub>/b<sub>2</sub>],
 
 ---
 
-<div class="slide-author" data-name="Rishab Manocha"></div>
+<div class="slide-author" data-name="Tolu Adekore"></div>
 
 ## 4.6 Why This Works
 
@@ -481,7 +479,7 @@ Any match **must** begin here!
 
 ---
 
-<div class="slide-author" data-name="Rishab Manocha"></div>
+<div class="slide-author" data-name="Tolu Adekore"></div>
 
 ## 4.7 The Final Domino
 
@@ -494,7 +492,7 @@ Allows top to add the trailing ◇ to complete the match
 
 ---
 
-<div class="slide-author" data-name="Rishab Manocha"></div>
+<div class="slide-author" data-name="Tolu Adekore"></div>
 
 ## 4.8 Correctness
 

@@ -348,6 +348,10 @@
     margin-top: 0.5em;
 }
 
+.reflection-small {
+    font-size: 0.85em;
+}
+
 /* Cases styling for math */
 .cases {
     display: inline-block;

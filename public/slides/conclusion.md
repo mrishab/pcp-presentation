@@ -59,18 +59,22 @@ Knowing where the hard limits are saves you from chasing solutions that don't ex
 
 ---
 
+<div class="reflection-small">
+
 ## Reflection
 
 - **What worked well:**
-  - Clear division of topics helped us explain the proof step by step  
+  - Choice of tech stack, and focus on simplicity and clarity
   - Visual domino examples made PCP easier to understand  
 
 - **What could be improved:**
-  - We should have reduced repetition and slide count earlier  
-  - More time for final review would have improved consistency and flow  
+  - Optimal distribution of the core and complex work among all members.
+  - Proactive communication, and commitment and responsibility toward other team members.
 
 - **Overall:**
   - This project gave us a stronger understanding of undecidability and PCP.
+
+</div>
 
 <div class="slide-author" data-name="Nicole Zino"></div>
 
