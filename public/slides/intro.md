@@ -2,8 +2,6 @@
 
 # Undecidability & The Post Correspondence Problem
 
-<div class="slide-author" data-name="Rishab Manocha"></div>
-
 ---
 
 ## What is Decidability

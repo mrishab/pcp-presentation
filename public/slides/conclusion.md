@@ -69,7 +69,7 @@ Knowing where the hard limits are saves you from chasing solutions that don't ex
 
 - **What could be improved:**
   - Optimal distribution of the core and complex work among all members.
-  - Proactive communication, and commitment and responsibility toward other team members.
+  - Proactive communication, and timely contributions.
 
 - **Overall:**
   - This project gave us a stronger understanding of undecidability and PCP.
